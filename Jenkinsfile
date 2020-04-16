@@ -3,7 +3,7 @@ node{
     git credentialsId: 'git', url: 'https://github.com/kishanpeddaboina/Docker'
 }
     stage('Mvn Package'){
-    def M2_HOME = tool name: 'maven', type: 'maven'
+    def M2_HOME = tool name: 'Maven', type: 'maven'
 def mvnCMD = "${M2_HOME}/bin/mvn"
     sh "${mvnCMD} clean package"
 }
