@@ -13,7 +13,7 @@ def mvnCMD = "${M2_HOME}"
     stage('Push Docker Image'){
         
     withCredentials([string(credentialsId: 'docker', variable: 'docker')]) {
-     sh "docker login -u kishanpeddaboina -p ${docker}"
+     sh "docker login -u kishanpeddaboina --password-stdin ${docker}"
 }
      sh 'docker push kishanpeddaboina/my-app:${BUILD_NUMBER}'
   
