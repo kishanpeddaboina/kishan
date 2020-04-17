@@ -1,6 +1,6 @@
 node{
     stage('Scm Checkout'){
-    git credentialsId: 'git', url: 'https://github.com/kishanpeddaboina/Docker'
+    git credentialsId: 'git', url: 'https://github.com/kishanpeddaboina/kishan'
 }
     stage('Mvn Package'){
     def M2_HOME = tool name: 'Maven', type: 'maven'
